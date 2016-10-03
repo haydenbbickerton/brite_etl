@@ -19,7 +19,7 @@ To start we'll create a FrameSet and set our frame data source.
 
 .. code:: python
 
-    from brite_etl.io.frame_sources import CsvSource
+    from brite_etl.core.io.frame_sources import CsvSource
 
     # Create a frameset to work with...
     cfm = brite_etl.lib.FrameSet('cfm')

@@ -16,7 +16,7 @@ Overview
       - |version| |wheel| |supported-versions|
 
 .. |docs| image:: https://readthedocs.org/projects/brite_etl/badge/?style=flat
-    :target: https://readthedocs.org/projects/brite_etl
+    :target: https://brite-etl.readthedocs.io/en/latest/readme.html
     :alt: Documentation Status
 
 .. |travis| image:: https://travis-ci.org/haydenbbickerton/brite_etl.svg?branch=master
@@ -30,7 +30,6 @@ Overview
 .. |version| image:: https://img.shields.io/pypi/v/brite_etl.svg?style=flat
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/brite_etl
-
 
 .. |wheel| image:: https://img.shields.io/pypi/wheel/brite_etl.svg?style=flat
     :alt: PyPI Wheel
@@ -53,7 +52,7 @@ This is all broken down on the introduction page.
 .. code:: python
 
     import brite_etl
-    from brite_etl.io.frame_sources import CsvSource
+    from brite_etl.core.io.frame_sources import CsvSource
 
     # Create a "set" of frames to work with...
     contoso = brite_etl.lib.FrameSet('contoso')
@@ -68,7 +67,7 @@ This is all broken down on the introduction page.
 
     # Import BriteCore reports. Don't have to open/change/save columns in excel, hyperlinks and other
     # formatting issues are handled. Don't even have to rename the file to take out the dates.
-    from brite_etl.io import import_report
+    from brite_etl.core.io import import_report
     adv_prem = import_report('/tmp/input', 'Advance Premium', sheet='Advance Premium List', skip_rows=2) # Pandas DataFrame
     contoso.frames.set('ap', df=adv_prem) # Make custom frames in your frame set
 

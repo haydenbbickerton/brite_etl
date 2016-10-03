@@ -5,6 +5,7 @@ from __future__ import print_function
 
 import io
 import re
+import sys
 from glob import glob
 from os.path import basename
 from os.path import dirname
@@ -67,10 +68,12 @@ setup(
         'pydash',
         'pandas',
         'typedecorator',
-        'xlwings',
         'coloredlogs',
-        'click'
-    ],
+        'click',
+        'mock'
+    ] + (
+        ['xlwings'] if ('win' in sys.platform) or ('darwin' == sys.platform) else []
+    ),
     extras_require={
         # eg:
         #   'rst': ['docutils>=0.11'],

@@ -1,8 +1,26 @@
+# flake8: noqa
 from __future__ import division, absolute_import, print_function
-import os
-import xlwings as xw
+import os, sys
 import pandas as pd
 
+is_travis = 'TRAVIS' in os.environ
+
+
+# xlwings only runs on Windows and OSX, because it uses Excel to function.
+# Travis CI doesn't support python on Windows or OSX.
+# So if it's running on travis, mock the whole thing.
+if is_travis:
+    from mock import Mock as MagicMock
+
+    class Mock(MagicMock):
+        @classmethod
+        def __getattr__(cls, name):
+                return Mock()
+
+    MOCK_MODULES = ['xlwings']
+    sys.modules.update((mod_name, Mock()) for mod_name in MOCK_MODULES)
+else:
+    import xlwings
 
 def import_report(file_path, name, sheet, skip_rows=0):
     """Import a downloaded BriteCore report with proper formating.
@@ -32,7 +50,7 @@ def import_report(file_path, name, sheet, skip_rows=0):
             full_file = os.path.join(file_path, f)
 
     # This opens it up in Excel
-    wb = xw.Book(full_file)
+    wb = xlwings.Book(full_file)
     ws = wb.sheets[sheet]
 
     table = ws.range('A1').offset(row_offset=skip_rows).expand(mode='table')
