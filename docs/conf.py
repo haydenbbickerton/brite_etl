@@ -29,7 +29,7 @@ project = u'BriteETL'
 year = '2016'
 author = u'Hayden Bickerton'
 copyright = '{0}, {1}'.format(year, author)
-version = release = u'0.0.1'
+version = release = u'0.1.0'
 
 pygments_style = 'trac'
 templates_path = ['.']
