@@ -1,7 +1,7 @@
 # flake8: noqa
 from __future__ import division, absolute_import, print_function
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 from ._globals import logger, NoValue
 
