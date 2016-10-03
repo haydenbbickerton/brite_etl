@@ -1,3 +1,4 @@
+# flake8: noqa
 from brite_etl.abstracts import Frame
 
 

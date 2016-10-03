@@ -1,12 +1,10 @@
 from __future__ import absolute_import, print_function
 
-from functools import wraps
 from pydash import merge
 from collections import namedtuple
 import time
 from brite_etl import logger
 from brite_etl.utils.types import DeepDict
-from typedecorator import params, Union
 
 
 def time_it(method):
@@ -86,6 +84,7 @@ class get_frames(object):
             kwargs['frames'] = self._frames
             return fn(*args, **kwargs)
         return new_func
+
 
 def computation(fn):
 

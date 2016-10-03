@@ -1,3 +1,4 @@
+from __future__ import division, absolute_import, print_function
 import abc
 from pydash import human_case, title_case
 
@@ -60,8 +61,7 @@ class Frame(object):
 
     @property
     def df(self):
-        """
-        Original pandas dataframe
+        """Original pandas dataframe
 
         :returns: The actual dataframe being wrapped by this class
         :rtype: `pandas.DataFrame <http://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.html#pandas-dataframe>`_
@@ -74,6 +74,11 @@ class Frame(object):
 
     @property
     def config(self):
+        """Configuration dict
+
+        :returns: a dict that has merged the frame config with the base frame class config.
+        :rtype: dict
+        """
         return self._config
 
     @property

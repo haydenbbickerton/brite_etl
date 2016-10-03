@@ -22,7 +22,7 @@ Functions
 =========
 
 - :py:func:`export_excel`:
-  Undocumented.
+  Export frames/frameset as an .xlsx doc
 
 - :py:func:`import_report`:
   Import a downloaded BriteCore report with proper formating.

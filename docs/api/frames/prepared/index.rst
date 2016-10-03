@@ -1,5 +1,11 @@
 ``brite_etl.frames.prepared``
-================
+=============================
+
+.. automodule:: brite_etl.frames.prepared
+
+   .. contents::
+      :local:
+
 
 Submodules
 ----------
@@ -36,10 +42,3 @@ Submodules
   revisions
   written_premium
 
-Module contents
----------------
-
-.. automodule:: prepared
-    :members:
-    :undoc-members:
-    :show-inheritance:

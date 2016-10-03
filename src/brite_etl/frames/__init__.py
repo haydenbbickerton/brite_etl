@@ -1,9 +1,15 @@
 """
-This is the module where frames are stored.
+.. py:module:: brite_etl.frames
 
-Each frame inherits from the base :class:`brite_etl.abstracts.frame.Frame`.
+This is where frames are stored.
 
-Prepared frames can be accessed in the submodule.
+Each frame inherits from the base :class:`brite_etl.abstracts.Frame`.
+
+Each frame class is imported into the ``brite_etl.frames`` namespace,
+so while you can do ``from brite_etl.frames.claims import Claims``,
+you can also do ``from brite_etl.frames import Claims``.
+
+Prepared frames can be accessed in the :mod:`brite_etl.frames.prepared <brite_etl.frames.prepared>` submodule.
 """
 
 # flake8: noqa

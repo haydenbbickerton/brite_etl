@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #
-# This is a janky little script to reformat the api docs. Needs to be redone
+# This is a janky little script to reformat the frames api docs. Needs to be redone
 #
 
 rm -rf docs/api/frames
@@ -18,6 +18,11 @@ sed -i -- 's/frames package/``brite_etl.frames``/g' docs/api/frames/index.rst
 sed -i -r 's/\sframes.(.*)/\1/g' docs/api/frames/index.rst
 # sed -i -- 's/Submodules/Frames/g' docs/api/frames/index.rst
 sed -i '/x_report_locations/a \  Prepared Frames <prepared/index>' docs/api/frames/index.rst
+sed -i -e '/Module contents/ { N; N; N; N; N; N; d; }' docs/api/frames/index.rst
+sed -i -e '/==============/a\\n.. automodule:: brite_etl.frames\n\n   .. contents::\n      :local:\n' docs/api/frames/index.rst
+sed -i -- 's/==============/====================/g' docs/api/frames/index.rst
+
+
 
 
 # Prepared Frames
@@ -30,3 +35,6 @@ mv docs/api/frames/prepared/rst docs/api/frames/prepared/index.rst
 sed -i -- 's/prepared package/``brite_etl.frames.prepared``/g' docs/api/frames/prepared/index.rst
 sed -i -r 's/\sprepared.(.*)/\1/g' docs/api/frames/prepared/index.rst
 # sed -i -- 's/Submodules/Frames/g' docs/api/frames/prepared/index.rst
+sed -i -e '/Module contents/ { N; N; N; N; N; N; d; }' docs/api/frames/prepared/index.rst
+sed -i -e '/==============/a\\n.. automodule:: brite_etl.frames.prepared\n\n   .. contents::\n      :local:\n' docs/api/frames/prepared/index.rst
+sed -i -- 's/================/=============================/g' docs/api/frames/prepared/index.rst

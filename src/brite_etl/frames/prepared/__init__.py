@@ -1,3 +1,6 @@
+"""
+.. py:module:: brite_etl.frames
+"""
 # flake8: noqa
 from __future__ import division, absolute_import, print_function
 

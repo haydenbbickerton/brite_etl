@@ -38,20 +38,20 @@ def generate_frame(**params):
     if os.path.isfile(os.path.join(filepath, filename)):
         if params['force']:
             click.secho('Overwriting {0}...'.format(params['name']),
-                fg='yellow'
-            )
+                        fg='yellow'
+                        )
             _write_file(filepath, filename, result)
         else:
             click.secho('{0} already exists... use --force to overwrite'.format(params['name']),
-                fg='red'
-            )
+                        fg='red'
+                        )
     else:
         _write_file(filepath, filename, result)
 
 
 @click.command('regenerate_all_frames')
 @click.confirmation_option(help='Are you sure you want to regenerate all frames? This will overwrite them all, and ' +
-    'cannot be undone.')
+                           'cannot be undone.')
 def regenerate_all_frames():
     import os
     import pydash

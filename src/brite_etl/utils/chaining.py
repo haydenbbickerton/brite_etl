@@ -2,7 +2,7 @@
 
 Taken from pydash - https://github.com/dgilland/pydash/blob/8b6f2687e2e61d27dc5ffd53e7021a766f19cf91/pydash/chaining.py
 """
-
+# flake8: noqa
 from __future__ import absolute_import, print_function
 
 import brite_etl as btl

@@ -13,7 +13,7 @@ Overview
       - | |travis|
         | |codecov|
     * - package
-      - |version| |wheel| |supported-versions|
+      - |version| |status| |supported-versions|
 
 .. |docs| image:: https://readthedocs.org/projects/brite_etl/badge/?style=flat
     :target: https://brite-etl.readthedocs.io/en/latest/readme.html
@@ -31,8 +31,8 @@ Overview
     :alt: PyPI Package latest release
     :target: https://pypi.python.org/pypi/brite_etl
 
-.. |wheel| image:: https://img.shields.io/pypi/wheel/brite_etl.svg?style=flat
-    :alt: PyPI Wheel
+.. |status| image:: https://img.shields.io/pypi/status/brite_etl.svg?style=flat
+    :alt: PyPI Package status
     :target: https://pypi.python.org/pypi/brite_etl
 
 .. |supported-versions| image:: https://img.shields.io/pypi/pyversions/brite_etl.svg?style=flat
@@ -43,6 +43,8 @@ Overview
 .. end-badges
 
 A python package for working with the BriteCore ETL.
+
+**PLEASE NOTE:** ``brite_etl`` follows `Semantic Versioning <http://semver.org/>`_, and is currently in the initial development phase (``0.x.x``). Use with caution.
 
 Use
 ===========
@@ -108,5 +110,5 @@ To run the all tests run::
 
 Test just your desired python version with ``tox -e py27`` or ``tox -e py35``. Much faster than running all test envirornments.
 
-Note about testing: some of the tests require real df_cache data to run. The locations for the df_cache directories is defined in the pytest.ini file. When running, the tests will check to make sure the directories exist and contain files. If they don't those tests will be skipped, the rest of the tests should function like normal.
+Note about testing: some of the tests require real df_cache data to run. The locations for the df_cache directories is defined in the ``setup.cfg`` file. When running, the tests will check to make sure the directories exist and contain files. If they don't those tests will be skipped, the rest of the tests should function like normal.
 

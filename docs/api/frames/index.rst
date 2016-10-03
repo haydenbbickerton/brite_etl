@@ -1,5 +1,11 @@
 ``brite_etl.frames``
-==============
+====================
+
+.. automodule:: brite_etl.frames
+
+   .. contents::
+      :local:
+
 
 Submodules
 ----------
@@ -56,10 +62,3 @@ Submodules
   x_report_locations
   Prepared Frames <prepared/index>
 
-Module contents
----------------
-
-.. automodule:: frames
-    :members:
-    :undoc-members:
-    :show-inheritance:

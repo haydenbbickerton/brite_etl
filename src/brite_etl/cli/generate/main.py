@@ -3,6 +3,7 @@ import pkg_resources
 
 from .frame import generate_frame, regenerate_all_frames
 
+
 @click.group(help="Generate new calculations/frames")
 def generate():
     """
@@ -13,7 +14,7 @@ def generate():
         click.secho('HEY! Looks like you might be using brite_etl installed as a package. To generate new files, ' +
                     'you\'ll probably want to clone the repo and install using `python setup.py develop` instead.',
                     fg='yellow'
-        )
+                    )
         click.echo()
         click.secho('Do you want to continue anyways? [y/n] ', nl=False, fg='yellow')
         c = click.getchar()
